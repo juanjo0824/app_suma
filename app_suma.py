@@ -14,7 +14,7 @@ from tkinter import *
 ventana_principal = Tk()
 
 # Titulo de la ventana
-ventana_principal.title("Daniel Alejandro Rios Rincon")
+ventana_principal.title("Juan Jose Delgado Benitez")
 
 # Tamaño de la ventana
 ventana_principal.geometry("800x500")  
@@ -90,18 +90,35 @@ frame_2.config(bg="ivory2", width=780, height=120)
 frame_2.place(x=10, y=260)
 
 # boton para sumar
-bt_sumar = Button(frame_2, text="Sumar", width=10)
+img_bt_sumar = PhotoImage(file="img/boton_sumar.png")
+bt_sumar = Button(frame_2, image = img_bt_sumar, width=105, height=105)
+#bt_sumar = Button(frame_2, text="Sumar", width=10)
+bt_sumar.place(x=116, y=7)
 
+# boton para borrar entrada y resultados 
+img_bt_borrar = PhotoImage(file="img/boton_borrar.png")
+bt_borrar =  Button(frame_2, image = img_bt_borrar, width=105, height=105)
+#bt_borrar = Button(frame_2, text="Sumar", width=10)
+bt_borrar.place(x=337, y=7)
+
+# boton para cerrar la app 
+img_bt_salir = PhotoImage(file="img/boton_salir.png")
+bt_salir = Button(frame_2, image = img_bt_salir, width=105, height=105)
+#bt_salir = Button(frame_2, text="Sumar", width=10)
+bt_salir.place(x=558, y=7)
 
 # -----------------------------
 # Frame 3
 # -----------------------------
 
-
 frame_3= Frame(ventana_principal)
 frame_3.config(bg="ivory2", width=780, height=120)
 frame_3.place(x=10, y=390)
 
+# Area texto
+t_resultados = Text(frame_3, width=780, height=100)
+t_resultados.config(bg="green", fg="white", font=("Countier",20))
+t_resultados.pack()
 
 # Metodo principal que despliega la ventana en pantalla
 ventana_principal.mainloop()
