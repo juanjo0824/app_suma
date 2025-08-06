@@ -8,7 +8,7 @@ from tkinter import messagebox
 
 def sumar():
     c = int(a.get()) + int(b.get())
-    t_resultados.insert(INSERT, "la suma de " a.get() + "+" )
+    t_resultados.insert(INSERT, "la suma de " + a.get() + "+" + b.get() + " casi siempre es " + str(c) + "\n")
 
 def borrar():
     messagebox.showinfo("Sumar 1.0", "Los datos seran borrados...")
@@ -17,7 +17,7 @@ def borrar():
     t_resultados.delete("1.0", "end")
 
 def salir():
-    messagebox.showinfo("Sumar 1.0", "La app se cerrara...")
+    messagebox.showinfo("Sumar .0", "La app se cerrara...")
     ventana_principal.destroy()
 
 # -----------------------------
@@ -90,7 +90,7 @@ label_b.config(bg="ivory2", fg= "blue",font=("Arial", 20), anchor=CENTER)
 label_b.place(x=585,y=120)
 
 # Entry para el segundo valor - b
-entry_b = Entry(frame_1, width=4, textvariable=a)
+entry_b = Entry(frame_1, width=4, textvariable=b)
 entry_b.config(font=("Arial", 20), justify=CENTER)
 entry_b.focus_set()
 entry_b.place(x=682, y=120)
